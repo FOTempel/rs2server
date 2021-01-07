@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  proxy:
+    container_name: proxy
+    hostname: proxy
+    image: nginx:latest
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /path/to/nginx/config:/etc/nginx
+      - /path/to/static_content:/var/www
+  rs2server:
+    container_name: rs2server
+    hostname: rs2server
+    image: rs2server:latest
+    ports:
+      - 7777:7777/udp
+      - 27015:27015/udp
+      - 8080:8080
+    volumes:
+      - /path/to/RS2:/RS2

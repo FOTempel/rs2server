@@ -1,0 +1,5 @@
+login anonymous
+force_install_dir /RS2/server
+@sSteamCmdForcePlatformType windows
+app_update 418480 validate
+exit
