@@ -1,5 +1,11 @@
-login anonymous
 force_install_dir /RS2/server
+login anonymous
 @sSteamCmdForcePlatformType windows
 app_update 418480 validate
+logoff
+force_install_dir /RS2/server/Binaries/Win64
+login anonymous
+@sSteamCmdForcePlatformType windows
+app_update 1007 validate
+logoff
 exit
